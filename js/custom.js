@@ -19,6 +19,7 @@ function getGender(){
     return gender;
 }
 function main(){
+    document.getElementById("output").innerHTML = "";
     var day = getUserInputAndCalculateDay();
     var gender = getGender();
     
@@ -27,7 +28,7 @@ function main(){
     }else{
         akanName = MALE_NAMES[day];
     }
-    alert("Your Akan Name is "+akanName);
+    document.getElementById("output").innerHTML = "Your Akan Name is " + akanName;
 }
 
 
