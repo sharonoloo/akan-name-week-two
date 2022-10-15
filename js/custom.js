@@ -20,30 +20,28 @@ function getUserInputAndCalculateDay()
 //console.log(getUserInputAndCalculateDay());
 
 function getGender(){
-    var gender = document.getElementById("gender-input").value;
+    var gender = prompt("Enter your gender:");
     return gender;
 }
 
 // console.log(getGender());
 function main(){
-    //document.getElementById("output").innerHTML = "";
+    document.getElementById("output").innerHTML = "";
     var day1 = getUserInputAndCalculateDay();
-    var gender = getGender();
     console.log(day1);
+    var gender = getGender();
     console.log(gender);
     var akanName = null;
     //gender=female;
     
     if (gender.toLowerCase().startsWith("f")){
         akanName = FEMALE_NAMES[day1];
-        console.log(akanName);
     }else{
         akanName = MALE_NAMES[day1];
-        console.log(akanName);
     }
     document.getElementById("output").innerHTML = "Your Akan Name is " + akanName;
 }
-main();
+console.log(main())
 
 
 
