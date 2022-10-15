@@ -29,82 +29,81 @@
         <h3>Find out your akan name</h3>
         <div class="row">
           <div class="col-sm-4">
-            <table class="tg">
+            <table class="table">
+                <thead class="thead-dark">
                 <tr>
-                    <th class="tg-baqh">Day of the Week</th>
-                    <th class="tg-0lax">Female Name</th>
-                    <th class="tg-0lax">Male Name</th>
+                    <th>Day of the Week</th>
+                    <th>Female Name</th>
+                    <th>Male Name</th>
+                </tr>
+                </thead>
+                <tr>
+                    <td>SUNDAY</td>
+                    <td>Akosua</td>
+                    <td>Kwasi</td>
                 </tr>
                 <tr>
-                    <td class="tg-0lax">SUNDAY</td>
-                    <td class="tg-0lax">Akosua</td>
-                    <td class="tg-0lax">Kwasi</td>
+                    <td>MONDAY</td>
+                    <td>Adwoa</td>
+                    <td>Kudwo</td>
                 </tr>
                 <tr>
-                    <td class="tg-0lax">MONDAY</td>
-                    <td class="tg-0lax">Adwoa</td>
-                    <td class="tg-0lax">Kudwo</td>
+                    <td>TUESDAY</td>
+                    <td>Abenaa</td>
+                    <td>Kwabena</td>
                 </tr>
                 <tr>
-                    <td class="tg-0lax">TUESDAY</td>
-                    <td class="tg-0lax">Abenaa</td>
-                    <td class="tg-0lax">Kwabena</td>
+                    <td>WEDNESDAY</td>
+                    <td>Akua</td>
+                    <td>Kwaku</td>
                 </tr>
                 <tr>
-                    <td class="tg-0lax">WEDNESDAY</td>
-                    <td class="tg-0lax">Akua</td>
-                    <td class="tg-0lax">Kwaku</td>
+                    <td>THURSDAY</td>
+                    <td>Yaa</td>
+                    <td>Yaw</td>
                 </tr>
                 <tr>
-                    <td class="tg-0lax">THURSDAY</td>
-                    <td class="tg-0lax">Yaa</td>
-                    <td class="tg-0lax">Yaw</td>
+                    <td>FRIDAY</td>
+                    <td>Afua</td>
+                    <td>Kofi</td>
                 </tr>
                 <tr>
-                    <td class="tg-0lax">FRIDAY</td>
-                    <td class="tg-0lax">Afua</td>
-                    <td class="tg-0lax">Kofi</td>
-                </tr>
-                <tr>
-                    <td class="tg-0lax">SATURDAY</td>
-                    <td class="tg-0lax">Ama</td>
-                    <td class="tg-0lax">Kwame</td>
+                    <td>SATURDAY</td>
+                    <td>Ama</td>
+                    <td>Kwame</td>
                 </tr>
             </table>
           </div>
           <div class="col-sm-4">
-            <p>Lorem ipsum..</p>
-            <img src="birds2.jpg" alt="Image">
+            <form id="form" onsubmit="return getUserInput()">
+                <label for="year">Year</label><br>
+                <input type="text" id="year-input" name="year" placeholder="Example: 1989"><br>
+                <label for="month">Month</label><br>
+                <input type="text" id="month-input" name="month" min="1" max="12" placeholder="Example: December=12 May=5"><br>
+                <label for="day">Day</label><br>
+                <input type="text" id="day-input" name="day" min="1" max="31" placeholder="5"><br>
+                <label for="gender">
+                    <p>Select your gender: </p>
+                    Male
+                    <input id="male-input" type="radio" name="gender" value="male" required>
+                    Female
+                    <input id="female-input" type="radio" name="gender" value="female" required>
+                    </label><br>
+                <input type="submit" value="Submit">
+            </form>
           </div>
           <div class="col-sm-4">
-            <p>Lorem ipsum..</p>
-            <img src="birds3.jpg" alt="Image">
+            <p id="output"></p>
+        <h4 id = display-name><strong>Your Akan name will be displayed below:</strong></h4>
+        <p id="result"></p>
+            
           </div>
         </div>
       </div>
-    <div class="container-fluid bg-3 text-center">
-        <h3>Find out your akan name</h3>
-        <form id="form" onsubmit="return getUserInput()">
-            <label for="year">Year</label><br>
-            <input type="text" id="year-input" name="year" placeholder="Example: 1989"><br>
-            <label for="month">Month</label><br>
-            <input type="text" id="month-input" name="month" min="1" max="12" placeholder="Example: December=12 May=5"><br>
-            <label for="day">Day</label><br>
-            <input type="text" id="day-input" name="day" min="1" max="31" placeholder="5"><br>
-            <label for="gender">
-                <p>Select your gender: </p>
-                Male
-                <input id="male-input" type="radio" name="gender" value="male" required>
-                Female
-                <input id="female-input" type="radio" name="gender" value="female" required>
-                </label><br>
-            <input type="submit" value="Submit">
-        </form>
-        
-    </div>
+    
     <footer class="container-fluid bg-4 text-center">
         <p id="output"></p>
-        <h4 id = display-name><strong>Your Akan name will be displayed below:</strong></h4>
+        <h4 id = display-name><strong>Copyright © Sharon Oloo - Akan Names</strong></h4>
         <p id="result"></p>
       </footer>
     <script src="js/custom.js"></script>
