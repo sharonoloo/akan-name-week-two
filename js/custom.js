@@ -62,12 +62,12 @@ function getUserInput() {
         }
     console.log(index);
     if (myGenderValue == "male" && monthValid && dayValid) {
-        document.getElementById('result').textContent = "You were born on a " + DAYS_OF_WEEK[index] + " , your Akan name is " + MALE_NAMES[index];
+        document.getElementById('result').textContent = "You are a " + myGenderValue + " born on a " + DAYS_OF_WEEK[index] + " , your Akan name is " + MALE_NAMES[index];
         console.log('result');
         document.getElementById('result').style.fontSize = "18px";
         return false;
     } else if (myGenderValue == "female" && monthValid && dayValid) {
-        document.getElementById('result').textContent = "You were born on a " + DAYS_OF_WEEK[index] + " , your Akan name is " + FEMALE_NAMES[index];
+        document.getElementById('result').textContent = "You are a " + myGenderValue+ " born on a " + DAYS_OF_WEEK[index] + " , your Akan name is " + FEMALE_NAMES[index];
         document.getElementById('result').style.fontSize = "18px";
         return false;
     } else {
