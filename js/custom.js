@@ -7,34 +7,43 @@ function getUserInputAndCalculateDay()
     console.log(year);
     var century=parseInt(year.substring(0,2));
     console.log(century);
-    //year = parseInt(year);
-    var month = document.getElementById("month-input").value;
+    year=parseInt(year);
+    console.log(year);
+    var month = parseInt(document.getElementById("month-input").value);
     console.log(month);
-    var day=document.getElementById("day-input").value;
+    var day=parseInt(document.getElementById("day-input").value);
     console.log(day);
     var dayOfTheWeek = Math.round( (( (century/4) -2*century-1) + ((5*year/4) ) + ((26*(month+1)/10)) + day ) % 7);
-
     return dayOfTheWeek;
 }
 
+//console.log(getUserInputAndCalculateDay());
 
 function getGender(){
-    var gender = prompt("Enter your gender:");
+    var gender = document.getElementById("gender-input").value;
     return gender;
 }
+
+// console.log(getGender());
 function main(){
-    document.getElementById("output").innerHTML = "";
-    var day = getUserInputAndCalculateDay();
+    //document.getElementById("output").innerHTML = "";
+    var day1 = getUserInputAndCalculateDay();
     var gender = getGender();
+    console.log(day1);
+    console.log(gender);
+    var akanName = null;
+    //gender=female;
     
     if (gender.toLowerCase().startsWith("f")){
-        akanName = FEMALE_NAMES[day];
+        akanName = FEMALE_NAMES[day1];
+        console.log(akanName);
     }else{
-        akanName = MALE_NAMES[day];
+        akanName = MALE_NAMES[day1];
+        console.log(akanName);
     }
     document.getElementById("output").innerHTML = "Your Akan Name is " + akanName;
 }
-
+main();
 
 
 

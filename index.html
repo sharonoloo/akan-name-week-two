@@ -15,36 +15,48 @@
     <div class="container-fluid bg-1 text-center">
         <h3>Akan Names</h3>
         <img src="images/ghana.png" class="img-circle" alt="Ghana Flag" width="350" height="350">
-        <button onclick="main()">Click here to get Akan name!</button>
+        <!-- <button onclick="main()">Click here to get Akan name!</button> -->
         <p id="output"></p>
     </div>
     <div class="container-fluid bg-2 text-center">
         <h3>What are Akan Names</h3>
-        <p>In many parts of Ghana, and elsewhere in West Africa, a person’s name is determined by the day of the week on which she/he was born.
+        <p>In many parts of Ghana, and elsewhere in West Africa, a persons name is determined by the day of the week on which she/he was born.
             Enter your birthday and gender below to read your day name in Ashanti Twi, a dialect of Akan and the most widely spoken language in Ghana:</p>
+        <p id="output"></p>
+    
     </div>
+    
     <div class="container-fluid bg-3 text-center">
         <h3>Find out your akan name</h3>
-        <form id="form" onsubmit="return main()">
+        <form id="form" onsubmit="main()">
             <label for="year">Year</label><br>
             <input type="text" id="year-input" name="year" placeholder="Example: 1989"><br>
             <label for="month">Month</label><br>
             <input type="text" id="month-input" name="month" min="1" max="12" placeholder="Example: December=12 May=5"><br>
             <label for="day">Day</label><br>
             <input type="text" id="day-input" name="day" min="1" max="31" placeholder="5"><br>
-            <div id="radio">
+            <label for="gender">Day</label><br>
+            <input type="text" id="gender-input" name="gender" min="1" max="31" placeholder="5"><br>
+            <!-- <div id="radio">
                 <label for="gender">
                     <p>Select your gender: </p>
+                    <input type="radio" name="gender" value="Male">Male<br>
                     Male
-                    <input id="male-input" type="radio" name="gender" value="male" required>
+                    <input id="male-input" type="radio" name="gender" value="male" required> 
                     Female
-                    <input id="female-input" type="radio" name="gender" value="female" required>
+                    <input type="radio" name="gender" value="Female">Female<br>
+                    <input id="female-input" type="radio" name="gender" value="female" required> 
                 </label>
+                <p id="genderpick"></p>
                 <br><br>
-            </div>
+            </div> -->
+            <!-- <input type="button" id="myBtn" onclick="getGender()" value="Male">
+            <p id="genderpick"></p> -->
+            <!-- <input type="button" id="myBtn" onclick="getGender()" value="Female">
+            <p id="genderpick"></p> -->
             <input type="submit" value="Submit">
         </form>
-        <p id="output">Output</p>
+        
     </div>
     <script src="js/custom.js"></script>
 </body>
